@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 800px;
+            margin: auto;
+            align-items: center;
+        }
+        .btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color:;
+            /* padding: 30px; */
+            width: 200px;
+            height: 200px;
+            font-size: 60px;
+            border-radius: 17px;
+            border: 15px solid  transparent;
+            outline: 1px solid black;
+            cursor: pointer;
+            color: black;
+            font-weight: 300;
+        }
+        .btn[text]{
+            color: gray;
+        }
+        .btn:hover{
+            height: 170px;
+            width: 170px;
+            transition: ease 1s;
+            font-size: 40px;
+        }
+        .btn-opacity{
+        display: none;
+        }
+        img{
+            width: 400px;
+            transform: scale(0);
+        }
+        .img-back{
+            margin-top: 150px;
+            transform: scale(2);
+            transition: all 2s;
+        }
+        .outline{
+            border: 1px solid black;
+            border-radius: 17px;
+            padding: 20px;
+        }
+        .display-none{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> 
+        <div class="outline"> 
+    <button class="btn">Click</button>
+</div>
+    <img src="img1.jpeg" alt="">
+</div>
+    <script>
+        let buttons =   document.querySelectorAll("button")[0]
+        let imgShow =  document.querySelectorAll("img")
+       buttons.addEventListener("click", function(){
+        buttons.classList.add("btn-opacity")
+        document.querySelector("img").classList.add("img-back")
+        document.querySelectorAll("div")[1].classList.add("display-none")
+
+        })
+    </script>
+</body>
+</html>
